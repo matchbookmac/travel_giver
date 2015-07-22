@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'stripe'
 gem 'bootstrap_form'
+gem 'paperclip'
 
 group :production do
   gem 'rails_12factor'
