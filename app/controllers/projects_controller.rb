@@ -22,6 +22,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+
     @country = Country.find(params[:country_id])
     @project = @country.projects.find(params[:id])
   end

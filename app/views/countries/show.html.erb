@@ -5,6 +5,7 @@
 
 <p><%= @country.c_description %></p>
 
+
 <% if @country.projects.any? %>
   <% @country.projects.each do |project| %>
     <h3><%= link_to project.p_name, country_project_path(@country, project) %></h3>
@@ -20,3 +21,10 @@
           :data => {:confirm => "Are you sure you want to delete this project?",
           :method => "delete"} %></p>
 <% end %>
+
+<% if @country.projects.any? %>
+  <% @country.projects.each do |project| %>
+    <%= link_to project.p_name, country_project_path(@country, project) %>
+  <% end %>
+<% end %>
+<br><%= link_to "Edit", edit_country_path(@country) %>
