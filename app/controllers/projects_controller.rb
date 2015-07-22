@@ -1,5 +1,9 @@
 class ProjectsController < ApplicationController
 
+  def index
+    @projects = Project.all
+  end
+
   def new
     if current_user && current_user.admin
       @country = Country.find(params[:country_id])

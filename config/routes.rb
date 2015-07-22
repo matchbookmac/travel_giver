@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   end
 
   resources :charges
+  resources :allprojects, only: :index
 end
