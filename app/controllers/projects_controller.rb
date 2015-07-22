@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
   def destroy
     @country = Country.find(params[:country_id])
     @project = @country.projects.find(params[:id])
-    @country.destroy
+    @project.destroy
     redirect_to countries_path
   end
 
