@@ -2,6 +2,8 @@
 <h3><%= @country.c_name %></h3>
 <%= image_tag @project.project_image.url(:medium) %>
   <p>  Total Needed: $<%= @project.total_needed %></p>
+  <p> Total Donated: $<%= @project.total_donated %></p>
+  <p> Number of Donations: <%= @project.donation_count %></p>
 <p><%= @project.p_description %></p>
 
 <% if current_user && current_user.admin %>

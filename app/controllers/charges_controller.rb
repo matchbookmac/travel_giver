@@ -11,6 +11,10 @@ class ChargesController < ApplicationController
       @user = current_user
       @user.projects.push(@project)
     end
+    @project.donation_count += 1
+    @project.total_donated += 5
+    @project.save
+
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
       :card  => params[:stripeToken]
