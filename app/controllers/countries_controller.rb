@@ -5,7 +5,11 @@ class CountriesController < ApplicationController
   end
 
   def new
-    @country = Country.new
+    if current_user && current_user.admin
+      @country = Country.new
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def create
@@ -24,7 +28,9 @@ class CountriesController < ApplicationController
   end
 
   def edit
+    if current_user && current_user.admin
       @country = Country.find(params[:id])
+    redirect_to new_user_session_path
   end
 
   def update

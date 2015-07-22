@@ -9,6 +9,7 @@
 <% end %>
 
 
-<p>
-  <%= link_to "Add country", new_country_path %>
-</p>
+
+<% if current_user && current_user.admin %>
+  <p><%= link_to "Add country", new_country_path %></p>
+<% end %>

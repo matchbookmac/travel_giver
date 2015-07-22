@@ -13,10 +13,10 @@
   <% end %>
 <% end %>
 
-<p><%= link_to "Edit country page", edit_country_path %></p>
-<p><%= link_to "Add project", new_country_project_path(@country) %></p>
-
-
-<p><%= link_to "Delete country", country_path(@country),
-        :data => {:confirm => "Are you sure you want to delete this project?",
-        :method => "delete"} %></p>
+<% if current_user && current_user.admin %>
+  <p><%= link_to "Edit country page", edit_country_path %></p>
+  <p><%= link_to "Add project", new_country_project_path(@country) %></p>
+  <p><%= link_to "Delete country", country_path(@country),
+          :data => {:confirm => "Are you sure you want to delete this project?",
+          :method => "delete"} %></p>
+<% end %>
