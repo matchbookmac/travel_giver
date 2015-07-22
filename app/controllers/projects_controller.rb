@@ -1,4 +1,4 @@
-class CountriesController < ApplicationController
+class ProjectsController < ApplicationController
 
   def new
     @country = Country.find([:country_id])
@@ -18,7 +18,7 @@ class CountriesController < ApplicationController
   end
 
   def show
-    @country = Country.find(params[:project_id])
+    @country = Country.find(params[:id])
     @project = @country.projects.find(params[:id])
   end
 

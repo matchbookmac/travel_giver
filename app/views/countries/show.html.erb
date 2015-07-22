@@ -4,6 +4,9 @@
 
 
 <p><%= @country.c_description %></p>
-
-
-<%= link_to "Edit", edit_country_path %>
+<% if @country.projects.any? %>
+  <% @country.projects.each do |project| %>
+    <%= link_to project.p_name, country_project_path(@country, project) %>
+  <% end %>
+<% end %>
+<br><%= link_to "Edit", edit_country_path(@country) %>

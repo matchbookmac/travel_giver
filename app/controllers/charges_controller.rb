@@ -6,9 +6,11 @@ class ChargesController < ApplicationController
   def create
     # Amount in cents
     @amount = 500
-    @user = current_user
     @project = Project.find(params[:project_id])
-    @user.projects.push(@project)
+    if current_user
+      @user = current_user
+      @user.projects.push(@project)
+    end
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
       :card  => params[:stripeToken]
