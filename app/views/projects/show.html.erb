@@ -3,3 +3,5 @@
 <%= image_tag @project.project_image.url(:medium) %>
 
 <p><%= @project.p_description %></p>
+
+<p><%= link_to "Edit project", edit_country_project_path(@country, @project) %></p>
