@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+
   belongs_to :country
   validates :p_name, :presence => true
   validates :p_description, :presence => true

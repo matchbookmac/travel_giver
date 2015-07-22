@@ -12,12 +12,21 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
       <ul class="nav navbar-nav">
+
         <a class="pull-left", href="/"><span id="logo"></span></a>
         <a href="/", class="navbar-brand">Global Giver</a>
+
         <% if user_signed_in? %>
-          <li class="navbar-right"><%= link_to current_user.username, edit_user_registration_path %></a></li>
-          <li class="navbar-right"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+          <li class="dropdown navbar-right">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.email%>  <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><%= link_to "Edit Account", edit_user_registration_path %></a></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
         <% else %>
           <li class="navbar-right"><%= link_to "Sign up", new_user_registration_path %></li>
           <li class="navbar-right"><%= link_to "Sign in", new_user_session_path %></li>

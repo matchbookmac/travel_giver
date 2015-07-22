@@ -10,10 +10,9 @@ gem 'turbolinks'
 gem 'pry'
 gem 'bootstrap-sass'
 gem 'devise'
-gem 'stripe'
 gem 'bootstrap_form'
 gem 'paperclip'
-
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 group :production do
   gem 'rails_12factor'
 end
@@ -29,6 +28,7 @@ end
 group :test, :development do
   gem 'rspec-rails'
   gem 'launchy'
+  gem 'dotenv-rails'
 end
 
 group :test do
