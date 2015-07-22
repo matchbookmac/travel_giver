@@ -1,5 +1,5 @@
 class Country < ActiveRecord::Base
-  has_many :projects
+  has_many :projects, dependent: :destroy
   validates :c_name, :presence => true
   validates :continent, :presence => true
   validates :c_description, :presence => true
