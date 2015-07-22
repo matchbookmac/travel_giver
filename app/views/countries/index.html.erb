@@ -1,1 +1,14 @@
-<h1>Donate!</h1>
+<h1>All countries</h1>
+
+<% if @countries.any? %>
+  <% @countries.each do |country| %>
+    <h3><%= link_to country.c_name, country_path(country) %></h3>
+    <%= image_tag country.attached_image.url(:medium) %>
+    <p><%= country.c_description %></p>
+  <% end %>
+<% end %>
+
+
+<p>
+  <%= link_to "Add country", new_country_path %>
+</p>

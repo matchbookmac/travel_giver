@@ -7,10 +7,9 @@
   <br>
   <%= f.text_area :c_description, label: "Describe this country" %>
   <br>
-  <%= f.text_field :project_image_url, label: "Add a screen shot of the project" %>
+  <%= f.file_field :attached_image %>
   <br>
-  <%= f.text_field :project_link, label: "Add a link to the project" %>
-  <%= f.submit "Add project", class: "btn btn-success" %>
+  <%= f.submit "Add country", class: "btn btn-success" %>
 <% end %>
 <br>
-<%= link_to "Return to home page", skills_path %>
+<%= link_to "Return to home page", countries_path %>

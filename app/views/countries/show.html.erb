@@ -1,0 +1,9 @@
+<h1><%= @country.c_name %></h1>
+
+<%= image_tag @country.attached_image.url(:medium) %>
+
+
+<p><%= @country.c_description %></p>
+
+
+<%= link_to "Edit", edit_country_path %>

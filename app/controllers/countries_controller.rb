@@ -1,6 +1,7 @@
 class CountriesController < ApplicationController
 
   def index
+    @countries = Country.all
   end
 
   def new
@@ -45,6 +46,6 @@ class CountriesController < ApplicationController
 
   private
   def country_params
-    params.require(:country).permit(:c_name, :continent, :c_description)
+    params.require(:country).permit(:c_name, :continent, :c_description, :attached_image)
   end
 end
