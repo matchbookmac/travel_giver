@@ -1,1 +1,15 @@
+<<<<<<< HEAD
+<h1><%= @project.p_name %></h1>
+<h3><%= @country.c_name %></h3>
+<%= image_tag @project.project_image.url(:medium) %>
+
+<p><%= @project.p_description %></p>
+
+<% if current_user && current_user.admin %>
+  <p><%= link_to "Edit project", edit_country_project_path(@country, @project) %></p>
+  <p><%= link_to "Delete project", country_project_path(@country, @project),
+          :data => {:confirm => "Are you sure you want to delete this project?",
+          :method => "delete"} %></p>
+<% end %>
+
 <%= render partial: 'charges/form', project_id: @project.id %>
