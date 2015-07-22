@@ -6,6 +6,8 @@
   <br>
   <%= f.text_area :p_description, label: "Describe this project" %>
   <br>
+  <%= f.number_field :total_needed, label: "Total Amount Needed" %>
+  <br>
   <%= f.file_field :project_image %>
   <br>
   <%= f.submit "Add project", class: "btn btn-success" %>

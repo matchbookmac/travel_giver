@@ -2,6 +2,7 @@ class Project < ActiveRecord::Base
   has_and_belongs_to_many :users
   belongs_to :country
 
+  validates_presence_of :total_needed
   validates :p_name, :presence => true
   validates :p_description, :presence => true
 
