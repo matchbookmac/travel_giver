@@ -13,6 +13,10 @@ gem 'devise'
 gem 'bootstrap_form'
 gem 'paperclip'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'chartkick'
+gem 'groupdate'
+gem 'active_median'
+
 group :production do
   gem 'rails_12factor'
 end
