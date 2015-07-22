@@ -30,7 +30,9 @@ class CountriesController < ApplicationController
   def edit
     if current_user && current_user.admin
       @country = Country.find(params[:id])
-    redirect_to new_user_session_path
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def update
