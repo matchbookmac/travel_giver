@@ -5,5 +5,13 @@
 
 <p><%= @country.c_description %></p>
 
+<% if @country.projects.any? %>
+  <% @country.projects.each do |project| %>
+    <h3><%= link_to project.p_name, country_project_path(@country, project) %></h3>
+    <%= image_tag project.project_image.url(:medium) %>
+    <p><%= project.p_description %></p>
+  <% end %>
+<% end %>
 
-<%= link_to "Edit", edit_country_path %>
+<p><%= link_to "Edit country page", edit_country_path %></p>
+<p><%= link_to "Add project", new_country_project_path(@country) %></p>

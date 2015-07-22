@@ -1,0 +1,14 @@
+<% render "layouts/errors", :object => @project %>
+
+<%= bootstrap_form_for [@country, @project] do |f| %>
+  <%= f.text_field :p_name, label: "Project name" %>
+  <br>
+  <br>
+  <%= f.text_area :p_description, label: "Describe this project" %>
+  <br>
+  <%= f.file_field :project_image %>
+  <br>
+  <%= f.submit "Add project", class: "btn btn-success" %>
+<% end %>
+<br>
+<%= link_to "Return to country page", country_path(@country) %>

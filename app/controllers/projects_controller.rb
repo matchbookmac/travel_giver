@@ -1,13 +1,13 @@
-class CountriesController < ApplicationController
+class ProjectsController < ApplicationController
 
   def new
-    @country = Country.find([:country_id])
+    @country = Country.find(params[:country_id])
     @project = @country.projects.new
   end
 
   def create
     @country = Country.find(params[:country_id])
-    @project = @country.projects(project_params)
+    @project = @country.projects.new(project_params)
     if @project.save
       flash[:notice] = "Project saved."
       redirect_to country_path(@country)
@@ -18,7 +18,7 @@ class CountriesController < ApplicationController
   end
 
   def show
-    @country = Country.find(params[:project_id])
+    @country = Country.find(params[:country_id])
     @project = @country.projects.find(params[:id])
   end
 
