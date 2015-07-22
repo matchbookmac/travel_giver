@@ -10,9 +10,9 @@ gem 'turbolinks'
 gem 'pry'
 gem 'bootstrap-sass'
 gem 'devise'
-gem 'stripe'
 gem 'bootstrap_form'
 gem 'paperclip'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :production do
   gem 'rails_12factor'
