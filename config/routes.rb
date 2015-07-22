@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :countries do
     resources :projects
   end
+
+  resources :charges
+  
 end
