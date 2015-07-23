@@ -13,7 +13,7 @@ class ChargesController < ApplicationController
       @user.projects.push(@project)
     end
     @project.donation_count += 1
-    @project.total_donated += 5
+    @project.total_donated += @a
     @project.save
 
     customer = Stripe::Customer.create(

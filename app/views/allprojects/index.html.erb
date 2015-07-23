@@ -1,6 +1,17 @@
 <h1>All projects</h1>
 
 <% @projects.each do |project| %>
-  <% country = Country.find(project.country_id) %>
-  <%=link_to project.p_name, country_project_path(country, project) %>
+  <div class="row">
+    <div class="col-sm-12">
+      <% country = Country.find(project.country_id) %>
+      <%=link_to project.p_name, country_project_path(country, project) %>
+      <% if project.p_image %>
+        <%= image_tag (project.p_image), class:"country-image" %>
+      <% else  %>
+        <%= image_tag project.attached_image.url(:medium) %>
+      <% end %>
+    </div>
+  </div>
+  <br />
+
 <% end %>
