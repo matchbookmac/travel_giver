@@ -2,7 +2,7 @@
   <%= hidden_field_tag 'project_id', params[:id] %>
 
   <%= label_tag "Amount you want to donate" %>
-  <%= number_field_tag "amount", min= "0" %>
+  <%= number_field_tag "amount", nil, min: 0 %>
 
   <article>
     <label class="amount">
@@ -12,5 +12,5 @@
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Donate!"
-          data-amount="500"></script>
+          ></script>
 <% end %>

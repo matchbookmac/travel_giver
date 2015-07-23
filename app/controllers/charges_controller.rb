@@ -5,7 +5,8 @@ class ChargesController < ApplicationController
 
   def create
     # Amount in cents
-    @amount = params["amount"].to_i * 100
+    @a = params["amount"].to_i
+    @amount = @a * 100
     @project = Project.find(params[:project_id])
     if current_user
       @user = current_user
