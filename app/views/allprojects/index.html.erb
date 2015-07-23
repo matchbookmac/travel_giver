@@ -1,3 +1,4 @@
+<div class="project">
 <h1>All projects</h1>
 
 <% @projects.each do |project| %>
@@ -5,6 +6,7 @@
     <div class="col-sm-12">
       <% country = Country.find(project.country_id) %>
       <%=link_to project.p_name, country_project_path(country, project) %>
+      <p><%= country.c_name %></p>
       <% if project.p_image %>
         <%= image_tag (project.p_image), class:"country-image" %>
       <% else  %>
@@ -15,3 +17,4 @@
   <br />
 
 <% end %>
+</div>
