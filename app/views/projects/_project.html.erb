@@ -1,0 +1,23 @@
+<div class="col-sm-5">
+  <h1><%= @project.p_name %></h1>
+  <% if @project.p_image %>
+    <%= image_tag(@project.p_image, class:'project-image-large') %>
+  <% else %>
+    <%= image_tag @project.project_image.url(:medium) %>
+  <% end %>
+
+  <h3><%= @country.c_name %></h3>
+    <p>  Total Needed: $<%= @project.total_needed %></p>
+    <p> Total Donated: $<%= @project.total_donated %></p>
+    <p> Number of Donations: <%= @project.donation_count %></p>
+  <p><%= @project.p_description %></p>
+
+  <% if current_user && current_user.admin %>
+    <p><%= link_to "Edit project", edit_country_project_path(@country, @project) %></p>
+    <p><%= link_to "Delete project", country_project_path(@country, @project),
+            :data => {:confirm => "Are you sure you want to delete this project?",
+            :method => "delete"} %></p>
+  <% end %>
+
+  <%= render partial: 'charges/form', project_id: @project.id %>
+</div>

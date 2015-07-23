@@ -5,14 +5,15 @@ class ChargesController < ApplicationController
 
   def create
     # Amount in cents
-    @amount = 500
+    @a = params["amount"].to_i
+    @amount = @a * 100
     @project = Project.find(params[:project_id])
     if current_user
       @user = current_user
       @user.projects.push(@project)
     end
     @project.donation_count += 1
-    @project.total_donated += 5
+    @project.total_donated += @a
     @project.save
 
     customer = Stripe::Customer.create(

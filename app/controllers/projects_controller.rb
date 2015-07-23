@@ -16,8 +16,6 @@ class ProjectsController < ApplicationController
   def create
     @country = Country.find(params[:country_id])
     @project = @country.projects.new(project_params)
-    @project.donation_count = 0
-    @project.total_donated = 0
     if @project.save
       flash[:notice] = "Project saved."
       redirect_to country_path(@country)

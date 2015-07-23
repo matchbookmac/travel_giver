@@ -1,0 +1,50 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Guest/Desktop/travel_giver/app/models/country.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/travel_giver/spec/models/project_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/Guest/Desktop/travel_giver/app/models/project.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/travel_giver/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ]
+    },
+    "timestamp": 1437669474
+  }
+}

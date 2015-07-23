@@ -1,0 +1,10 @@
+<div class="col-sm-2 sidebar">
+  <% @countries.each do |country| %>
+    <h5><%= country.c_name %></h5>
+    <% if country.image %>
+      <%= link_to (image_tag (country.image)), country_path(country), class:"country-image thumbnail", remote:true %>
+    <% else  %>
+      <%= image_tag country.attached_image.url(:medium) %>
+    <% end %>
+  <% end %>
+</div>

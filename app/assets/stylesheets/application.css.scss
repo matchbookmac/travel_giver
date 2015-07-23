@@ -14,8 +14,59 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets"
-@import "bootstrap"
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-body
-  padding-top: 50px
+body{
+  padding-top: 50px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+a:hover{
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.country-image{
+  width: 200px;
+}
+
+.project-image{
+  width: 200px;
+}
+
+.thumbnail{
+  width: 70px;
+}
+
+.container{
+ margin:5px;
+}
+
+#show_countries_sidebar{
+  padding-top:50px;
+}
+
+.sidebar{
+  .thumbnail{
+    height:auto;
+    margin:0 auto;
+  }
+  text-align:center;
+  margin:0 auto;
+
+}
+
+#all_countries{
+  text-align:center;
+
+}
+
+.project-image-large{
+  width:300px;
+}
+
+.project{
+  text-align:center;
+}

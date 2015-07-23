@@ -1,4 +1,6 @@
 <h1><%= @project.p_name %></h1>
+<%= image_tag(@project.p_image) %>
+
 <h3><%= @country.c_name %></h3>
 <%= image_tag @project.project_image.url(:medium) %>
   <p>  Total Needed: $<%= @project.total_needed %></p>

@@ -1,7 +1,7 @@
 class CountriesController < ApplicationController
 
   def index
-    @countries = Country.all
+    @countries = Country.order(:c_name)
   end
 
   def new
@@ -25,6 +25,7 @@ class CountriesController < ApplicationController
 
   def show
     @country = Country.find(params[:id])
+    @countries = Country.order(:c_name)
   end
 
   def edit
