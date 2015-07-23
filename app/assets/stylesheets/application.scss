@@ -14,8 +14,29 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets"
-@import "bootstrap"
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-body
-  padding-top: 50px
+body {
+  padding-top: 50px;
+  min-height: 100%;
+}
+
+html {
+  height: 100%
+}
+
+.empty-grid {
+  background-color: transparent;
+  height: 160px;
+  width: 20%;
+  border: 1px solid yellow;
+}
+
+.map-wrapper {
+  background: url(map.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
