@@ -14,14 +14,20 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets"
-@import "bootstrap"
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-body
-  padding-top: 50px
+body{
+  padding-top: 50px;
+}
+.country-image{
+  width: 200px;
+}
 
-.country-image
-  width: 200px
+.thumbnail{
+  width: 70px;
+}
 
-.thumbnail
-  width: 70px
+.container{
+ margin:5px;
+}
