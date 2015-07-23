@@ -1,15 +1,27 @@
-<h1>All countries</h1>
+<div class="row">
+  <div id="show_countries_sidebar">
+  </div>
+  <div id="show_countries">
+  </div>
+</div>
 
-<% if @countries.any? %>
-  <% @countries.each do |country| %>
-    <h3><%= link_to country.c_name, country_path(country) %></h3>
-    <%= image_tag country.attached_image.url(:medium) %>
-    <p><%= country.c_description %></p>
-  <% end %>
-<% end %>
+<div id="all_countries">
+    <h1>All countries</h1>
 
 
+    <% if @countries.any? %>
+      <% @countries.each do |country| %>
+        <h3><%= link_to country.c_name, country_path(country), remote: true %></h3>
+        <% if country.image %>
+          <%= image_tag (country.image), class:"country-image" %>
+        <% else  %>
+          <%= image_tag country.attached_image.url(:medium) %>
+        <% end %>
+        <p><%= country.c_description %></p>
+      <% end %>
+    <% end %>
 
-<% if current_user && current_user.admin %>
-  <p><%= link_to "Add country", new_country_path %></p>
-<% end %>
+    <% if current_user && current_user.admin %>
+      <p><%= link_to "Add country", new_country_path %></p>
+    <% end %>
+  </div>
