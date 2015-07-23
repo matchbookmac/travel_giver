@@ -3,9 +3,11 @@
   </div>
   <div id="show_countries">
   </div>
+  <div id="show_projects">
+  </div>
 </div>
 
-<div id="all_countries">
+<div id="all_countries" class="col-sm-4">
     <h1>All countries</h1>
 
 
@@ -17,7 +19,6 @@
         <% else  %>
           <%= image_tag country.attached_image.url(:medium) %>
         <% end %>
-        <p><%= country.c_description %></p>
       <% end %>
     <% end %>
 

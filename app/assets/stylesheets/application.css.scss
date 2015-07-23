@@ -19,8 +19,20 @@
 
 body{
   padding-top: 50px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
 }
+
+a:hover{
+  text-decoration:none;
+  font-weight:bold;
+}
+
 .country-image{
+  width: 200px;
+}
+
+.project-image{
   width: 200px;
 }
 
@@ -44,4 +56,13 @@ body{
   text-align:center;
   margin:0 auto;
 
+}
+
+#all_countries{
+  text-align:center;
+
+}
+
+.project-image-large{
+  width:300px;
 }
