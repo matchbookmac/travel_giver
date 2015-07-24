@@ -36,7 +36,7 @@ class ProjectsController < ApplicationController
       @country = Country.find(params[:country_id])
       @project = @country.projects.find(params[:id])
     else
-      redirect_to new_user_session_path
+      redirect_to root_path
     end
   end
 
@@ -45,7 +45,7 @@ class ProjectsController < ApplicationController
     @project = @country.projects.find(params[:id])
     if @project.update(project_params)
       flash[:notice] = "Your edits have been saved."
-      redirect_to country_path(@country)
+      redirect_to root_path
     else
       flash[:notice] = "Please try again."
       render :edit
@@ -56,7 +56,7 @@ class ProjectsController < ApplicationController
     @country = Country.find(params[:country_id])
     @project = @country.projects.find(params[:id])
     @project.destroy
-    redirect_to countries_path
+    redirect_to root_path
   end
 
   private

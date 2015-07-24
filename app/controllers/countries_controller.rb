@@ -2,6 +2,7 @@ class CountriesController < ApplicationController
 
   def index
     @countries = Country.order(:c_name)
+    @asia = Country.where(continent: 'Asia')
   end
 
   def new
