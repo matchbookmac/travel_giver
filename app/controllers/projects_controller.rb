@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
     @project = @country.projects.new(project_params)
     if @project.save
       flash[:notice] = "Project saved."
-      redirect_to country_path(@country)
+      redirect_to root_path
     else
       flash[:notice] = "Please try again."
       render :new
