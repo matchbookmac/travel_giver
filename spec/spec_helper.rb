@@ -16,6 +16,8 @@
 # users commonly want.
 #
 require 'capybara/poltergeist'
+require 'simplecov'
+SimpleCov.start
 Capybara.javascript_driver = :poltergeist
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
