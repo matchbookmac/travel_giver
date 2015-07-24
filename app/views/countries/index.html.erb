@@ -1,6 +1,6 @@
 <div class="notice"></div>
 
-<div class="row">
+<div class="row country-info">
   <div id="show_countries_sidebar">
   </div>
   <div id="show_countries">
@@ -10,7 +10,6 @@
 </div>
 
 <div id="all_countries" class="col-sm-3">
-    <h1>All countries</h1>
     <% if @countries.any? %>
       <% @countries.each do |country| %>
         <h3><%= link_to country.c_name, country_path(country), remote: true %></h3>
