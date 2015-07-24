@@ -2,10 +2,11 @@
 
 #### Author ####
 
-Jessica Engel, Erin Collins, Chris Sefkin, Franz Kpnufner
+Jessica Engel, Erin Collins, Chris Sefkin, Franz Knupfer
 
 ### Description ###
 
+GlobalGiver is a way to set up countries and projects for donations.
 
 ### Setup ###
 
