@@ -21,6 +21,8 @@ body{
   padding-top: 50px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
+  min-height: 100%;
+
 }
 
 a:hover{
@@ -69,11 +71,6 @@ a:hover{
 
 .project{
   text-align:center;
-}
-
-body {
-  padding-top: 50px;
-  min-height: 100%;
 }
 
 html {
