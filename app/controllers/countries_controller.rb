@@ -41,7 +41,7 @@ class CountriesController < ApplicationController
     @country = Country.find(params[:id])
     if @country.update(country_params)
       flash[:notice] = "Your edits have been saved."
-      redirect_to country_path(@country)
+      redirect_to root_path
     else
       flash[:notice] = "Please try again."
       render :edit
