@@ -88,9 +88,13 @@ html {
 }
 
 .map-wrapper {
-  background: url(map.jpeg) no-repeat center center fixed;
+  background: url(map.jpeg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.south-america:hover, .europe:hover, .asia:hover, .north-america:hover, .australia:hover, .asia:hover{
+  cursor: pointer;
 }
