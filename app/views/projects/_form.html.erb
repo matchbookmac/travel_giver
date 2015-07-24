@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Edit project for <%= @country.c_name %></h1>
+  <h1><%= @country.c_name %></h1>
 
   <% render "layouts/errors", :object => @project %>
 
@@ -13,7 +13,7 @@
     <br>
     <%= f.file_field :project_image %>
     <br>
-    <%= f.submit "Edit project", class: "btn btn-success" %>
+    <%= f.submit class: "btn btn-success" %>
   <% end %>
   <br>
   <%= link_to "Return to country page", country_path(@country) %>

@@ -2,8 +2,8 @@
 <div class="col-sm-5">
   <% if current_user && current_user.admin %>
     <div class="well admin-well">
-      <%= link_to "Edit", edit_country_project_path(@country, @project) %> |
-      <%= link_to "Delete", country_project_path(@country, @project),
+      <%= link_to "Edit Project", edit_country_project_path(@country, @project) %> |
+      <%= link_to "Delete Project", country_project_path(@country, @project),
               :data => {:confirm => "Are you sure you want to delete this project?",
               :method => "delete"} %>
     </div>
@@ -11,9 +11,11 @@
 
   <h1><%= @project.p_name %></h1>
   <% if @project.p_image %>
-    <%= image_tag(@project.p_image, class:'project-image-large') %>
+    <%= image_tag (@project.p_image), class:"country-image" %>
+  <% elsif @project.project_image_file_name %>
+    <%= image_tag @project.attached_image.url(:medium) %>
   <% else %>
-    <%= image_tag @project.project_image.url(:medium) %>
+  <%= image_tag ('missing.png'), class:"country-image" %>
   <% end %>
 
   <h3><%= @country.c_name %></h3>

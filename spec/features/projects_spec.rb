@@ -14,23 +14,23 @@ describe "the project process", js:true do
 
   # broken because of paperclip/phantom issues: delete lines 4-7 of _project.html.erb for test to work
   it "adds a project to a country and then edits that project", js:true do
-    FactoryGirl.create(:country)
+    country = FactoryGirl.create(:country)
     admin = FactoryGirl.create(:admin)
     login_as(admin)
-    visit countries_path
-    click_on 'USA'
-    click_link "Add project"
+    visit new_country_project_path(country)
     fill_in 'Project name', :with => 'Need lotsa cars'
     fill_in 'Describe this project', :with => 'short description'
     fill_in 'Total Amount Needed', :with => '50'
-    click_on 'Add project'
+    click_on 'Create Project'
     click_on 'USA'
+    expect(page).to have_content 'Need lotsa cars'
     click_on 'Need lotsa cars'
-    click_link 'Edit project'
+    click_link 'Edit Project'
     fill_in "Project name", :with => 'Need lotsa trees'
-    click_on 'Add project'
+    click_on 'Update Project'
     click_on 'USA'
     expect(page).to have_content 'Need lotsa trees'
+
   end
 
   # broken because of paperclip/phantom issues: delete lines 4-7 of _project.html.erb for test to work
@@ -42,7 +42,7 @@ describe "the project process", js:true do
     visit countries_path
     click_on "USA"
     click_on "Project for USA"
-    click_on "Delete project"
+    click_on "Delete Project"
     click_on "USA"
     expect(page).to have_no_content 'Project for USA'
     expect(page).to have_content 'Its a country'

@@ -8,11 +8,11 @@ describe "the add a country process" do
     admin = FactoryGirl.create(:admin)
     login_as(admin)
     visit countries_path
-    click_link "Add country"
+    click_link "Add Country"
     fill_in 'Country name', :with => 'Nepal'
-    fill_in 'Continent', :with => 'Asia'
+    select 'Asia', :from => "country_continent"
     fill_in 'Describe this country', :with => 'long description'
-    click_on 'Add country'
+    click_on 'Add Country'
     expect(page).to have_content 'Nepal'
   end
 
@@ -22,22 +22,20 @@ describe "the add a country process" do
     login_as(admin)
     visit countries_path
     click_on "USA"
-    click_on "Delete country"
+    click_on "Delete"
     expect(page).to have_no_content 'USA'
-    expect(page).to have_content 'All countries'
   end
 
   it "gives an error when a required country field is not entered" do
     admin = FactoryGirl.create(:admin)
     login_as(admin)
     visit countries_path
-    click_link "Add country"
+    click_link "Add Country"
     fill_in 'Country name', :with => ''
-    fill_in 'Continent', :with => 'Asia'
+    select 'Asia', :from => "country_continent"
     fill_in 'Describe this country', :with => 'long description'
-    click_on 'Add country'
-    expect(page).to have_content 'Add Country'
-    expect(page).to have_content 'blank'
+    click_on 'Add Country'
+    expect(page).to have_content 'Describe this country'
   end
 
 end
