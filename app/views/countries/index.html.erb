@@ -7,10 +7,25 @@
   </div>
 </div>
 
-<<<<<<< HEAD
 <div id="all_countries" class="col-sm-4">
     <h1>All countries</h1>
-=======
+    <% if @countries.any? %>
+      <% @countries.each do |country| %>
+        <h3><%= link_to country.c_name, country_path(country), remote: true %></h3>
+        <% if country.image %>
+          <%= image_tag (country.image), class:"country-image" %>
+        <% else  %>
+          <%= image_tag country.attached_image.url(:medium) %>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <% if current_user && current_user.admin %>
+      <p><%= link_to "Add country", new_country_path %></p>
+    <% end %>
+  </div>
+
+<div class="col-sm-8">
 <div class="container-fluid map-wrapper">
   <div class="row">
     <div class="empty-grid col-xs-2">
@@ -132,25 +147,4 @@
     </div>
   </div>
 </div>
-
-
-
-
->>>>>>> 1ad0ee993ebd826ed0bb39621db8670c9eefb2c1
-
-
-    <% if @countries.any? %>
-      <% @countries.each do |country| %>
-        <h3><%= link_to country.c_name, country_path(country), remote: true %></h3>
-        <% if country.image %>
-          <%= image_tag (country.image), class:"country-image" %>
-        <% else  %>
-          <%= image_tag country.attached_image.url(:medium) %>
-        <% end %>
-      <% end %>
-    <% end %>
-
-    <% if current_user && current_user.admin %>
-      <p><%= link_to "Add country", new_country_path %></p>
-    <% end %>
-  </div>
+</div>
