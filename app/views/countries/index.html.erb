@@ -1,4 +1,6 @@
-<div class="row">
+<div class="notice"></div>
+
+<div class="row country-info">
   <div id="show_countries_sidebar">
   </div>
   <div id="show_countries">
@@ -6,9 +8,8 @@
   <div id="show_projects">
   </div>
 </div>
-
+<div class="col-sm-12">
 <div id="all_countries" class="col-sm-3">
-    <h1>All countries</h1>
     <% if @countries.any? %>
       <% @countries.each do |country| %>
         <h3><%= link_to country.c_name, country_path(country), remote: true %></h3>
@@ -19,132 +20,225 @@
         <% end %>
       <% end %>
     <% end %>
-
-    <% if current_user && current_user.admin %>
-      <p><%= link_to "Add country", new_country_path %></p>
-    <% end %>
   </div>
 
-<div class="col-sm-9">
-<div class="container-fluid map-wrapper">
-  <div class="row">
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+<div class="col-xs-9 map">
+  <div class="map-wrapper">
+    <div class="row">
+      <div class="empty-grid col-xs-2 north-america" onClick ="$('#myModalNorthAmerica').modal('toggle')" id="popover1" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in North America">
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      </div>
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      <div class="empty-grid col-xs-2 north-america" onClick ="$('#myModalNorthAmerica').modal('toggle')" id="popover2" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in North America">
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      </div>
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      <div class="empty-grid col-xs-2 asia" onClick ="$('#myModalAsia').modal('toggle')" id="popover3" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Asia">
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      </div>
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      <div class="empty-grid col-xs-2 asia" onClick ="$('#myModalAsia').modal('toggle')" id="popover4" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Asia">
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      </div>
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      <div class="empty-grid col-xs-2 asia" onClick ="$('#myModalAsia').modal('toggle')" id="popover5" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Asia">
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      </div>
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        northern-south america
-      </p>
-    </div>
+      <div class="empty-grid col-xs-2 north-america" onClick ="$('#myModalNorthAmerica').modal('toggle')" id="popover6" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in North America">
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        northern-south america
-      </p>
-    </div>
+      </div>
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      <div class="empty-grid col-xs-2 north-america" onClick ="$('#myModalNorthAmerica').modal('toggle')" id="popover7" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in North America">
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      </div>
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
-    <div class="empty-grid col-xs-2 ecuador">
-      <p>
-        ECUADOR
-      </p>
-    </div>
+      <div class="empty-grid col-xs-2 europe" onClick ="$('#myModalEurope').modal('toggle')" id="popover8" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Europe">
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      </div>
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
-    </div>
+      <div class="empty-grid col-xs-2 asia" onClick ="$('#myModalAsia').modal('toggle')" id="popover9" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Asia">
 
-    <div class="empty-grid col-xs-2">
-      <p>
-        hi
-      </p>
+      </div>
+
+      <div class="empty-grid col-xs-2 asia" onClick ="$('#myModalAsia').modal('toggle')" id="popover10" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Asia">
+
+      </div>
+
+      <div class="empty-grid col-xs-2 north-america" onClick ="$('#myModalNorthAmerica').modal('toggle')" id="popover11" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in North America">
+
+      </div>
+
+      <div class="empty-grid col-xs-2 south-america" onClick ="$('#myModalSouthAmerica').modal('toggle')" id="popover12" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in South America">
+
+      </div>
+
+      <div class="empty-grid col-xs-2 africa" onClick ="$('#myModalAfrica').modal('toggle')" id="popover13" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Africa">
+
+      </div>
+
+      <div class="empty-grid col-xs-2 asia" onClick ="$('#myModalAsia').modal('toggle')" id="popover14" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Asia">
+
+      </div>
+
+      <div class="empty-grid col-xs-2 asia" onClick ="$('#myModalAsia').modal('toggle')" id="popover15" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Asia">
+
+      </div>
+      <div class="empty-grid col-xs-2">
+
+      </div>
+      <div class="empty-grid col-xs-2 south-america" onClick ="$('#myModalSouthAmerica').modal('toggle')" id="popover16" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in South America">
+      </div>
+
+      <div class="empty-grid col-xs-2 africa" onClick ="$('#myModalAfrica').modal('toggle')" id="popover17" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Africa">
+
+      </div>
+
+      <div class="empty-grid col-xs-2 australia" onClick ="$('#myModalAustralia').modal('toggle')" id="popover18" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Australia">
+
+      </div>
+
+      <div class="empty-grid col-xs-2 australia" onClick ="$('#myModalAustralia').modal('toggle')" id="popover19" data-trigger="hover"  data-container="body" data-toggle="popover" data-placement="top" data-content="View Projects in Australia">
+
+      </div>
     </div>
   </div>
 </div>
 </div>
+
+<!-- Button trigger modal -->
+<div class="modal fade" id="myModalAsia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Asia</h4>
+      </div>
+      <div class="modal-body">
+        <% @AsiaCountries.each do |country| %>
+          <%= link_to country.c_name, country_path(country), remote: true %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModalSouthAmerica" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in South America</h4>
+      </div>
+      <div class="modal-body">
+        <% @SouthAmericaCountries.each do |country| %>
+          <%= link_to country.c_name, country_path(country), remote: true %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModalNorthAmerica" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in North America</h4>
+      </div>
+      <div class="modal-body">
+        <% @NorthAmericaCountries.each do |country| %>
+          <%= link_to country.c_name, country_path(country), remote: true %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModalEurope" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Europe</h4>
+      </div>
+      <div class="modal-body">
+        <% @EuropeCountries.each do |country| %>
+          <%= link_to country.c_name, country_path(country), remote: true %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModalAustralia" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Australia</h4>
+      </div>
+      <div class="modal-body">
+        <% @AustraliaCountries.each do |country| %>
+          <%= link_to country.c_name, country_path(country), remote: true %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModalAfrica" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Africa</h4>
+      </div>
+      <div class="modal-body">
+        <% @AfricaCountries.each do |country| %>
+          <%= link_to country.c_name, country_path(country), remote: true %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModalAntartica" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Current Countries with Active Projects in Antartica</h4>
+      </div>
+      <div class="modal-body">
+        <% @AntarticaCountries.each do |country| %>
+          <%= link_to country.c_name, country_path(country), remote: true %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  $('#popover1').popover();
+  $('#popover2').popover();
+  $('#popover3').popover();
+  $('#popover4').popover();
+  $('#popover5').popover();
+  $('#popover6').popover();
+  $('#popover7').popover();
+  $('#popover8').popover();
+  $('#popover9').popover();
+  $('#popover10').popover();
+  $('#popover11').popover();
+  $('#popover12').popover();
+  $('#popover13').popover();
+  $('#popover14').popover();
+  $('#popover15').popover();
+  $('#popover16').popover();
+  $('#popover17').popover();
+  $('#popover18').popover();
+  $('#popover19').popover();
+</script>
