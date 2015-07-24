@@ -15,7 +15,7 @@
   <% if @country.image %>
     <%= image_tag (@country.image), class:"country-image" %>
   <% elsif @country.attached_image_file_name  %>
-    <%= image_tag @country.attached_image_file_name(:medium) %>
+    <%= image_tag (@country.attached_image_file_name), class:"country-image" %>
   <% else %>
     <%= image_tag ('missing.png'), class:"country-image" %>
   <% end %>
