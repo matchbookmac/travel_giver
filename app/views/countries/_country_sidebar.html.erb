@@ -4,7 +4,7 @@
     <% if country.image %>
       <%= link_to (image_tag (country.image)), country_path(country), class:"country-image thumbnail", remote:true %>
     <% elsif country.attached_image_file_name  %>
-      <%= link_to (image_tag country.attached_image_file_name(:thumbnail)), country_path(country), class:"country-image thumbnail", remote:true %>
+      <%= link_to (image_tag (country.attached_image_file_name)), country_path(country), class:"country-image thumbnail", remote:true %>
     <% else %>
       <%= link_to (image_tag('missing.png')), country_path(country), class:"country-image thumbnail", remote:true %>
     <% end %>
