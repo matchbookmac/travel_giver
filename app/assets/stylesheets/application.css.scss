@@ -84,7 +84,6 @@ html {
   background-color: transparent;
   height: 160px;
   width: 20%;
-  border: 1px solid yellow;
 }
 
 .map-wrapper {
@@ -95,6 +94,6 @@ html {
   background-size: cover;
 }
 
-.south-america:hover, .europe:hover, .asia:hover, .north-america:hover, .australia:hover, .asia:hover{
+.south-america:hover, .europe:hover, .asia:hover, .north-america:hover, .australia:hover, .africa:hover{
   cursor: pointer;
 }

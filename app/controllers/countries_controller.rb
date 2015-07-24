@@ -4,7 +4,11 @@ class CountriesController < ApplicationController
     @countries = Country.order(:c_name)
     @AsiaCountries = Country.where(:continent => "Asia")
     @AfricaCountries = Country.where(:continent => "Africa")
-    @AsiaCountries = Country.where(:continent => "Europe")
+    @NorthAmericaCountries = Country.where(:continent => "North-America")
+    @SouthAmericaCountries = Country.where(:continent => "South-America")
+    @AustraliaCountries = Country.where(:continent => "Australia")
+    @EuropeCountries = Country.where(:continent => "Europe")
+    @AntarticaCountries = Country.where(:continent => "Antartica")
   end
 
   def new
