@@ -1,7 +1,5 @@
 <div class="container">
   <div class="col-sm-6">
-    <h1>Add Country</h1>
-
     <% render "layouts/errors", :object => @country %>
 
     <%= bootstrap_form_for @country do |f| %>
@@ -12,7 +10,7 @@
       <%= f.file_field :attached_image %>
       <br>
       <%= f.select(:continent, options_for_select([['North-America', 'North-America'], ['South-America', 'South-America'], ['Africa', 'Africa'], ['Asia', 'Asia'], ['Antarctica', 'Antarctica'], ['Europe', 'Europe'], ['Australia', 'Australia']]), :include_blank => true) %>
-      <%= f.submit "Add country", class: "btn btn-success" %>
+      <%= f.submit  class: "btn btn-success" %>
     <% end %>
     <br>
     <%= link_to "Return to home page", countries_path %>
