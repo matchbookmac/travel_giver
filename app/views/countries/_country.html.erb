@@ -5,7 +5,7 @@
 
 <% if @country.image %>
   <%= image_tag (@country.image), class:"country-image" %>
-<% else  %>
+<% elsif @country.  %>
   <%= image_tag @country.attached_image.url(:medium) %>
 <% end %>
 

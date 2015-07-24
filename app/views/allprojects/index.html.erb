@@ -11,6 +11,8 @@
         <%= image_tag (project.p_image), class:"country-image" %>
       <% elsif project.project_image_file_name %>
         <%= image_tag project.attached_image.url(:medium) %>
+      <% else %>
+      <%= image_tag ('missing.png'), class:"country-image" %>
       <% end %>
     </div>
   </div>

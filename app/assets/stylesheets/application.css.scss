@@ -42,9 +42,7 @@ a:hover{
   width: 70px;
 }
 
-.container{
- margin:10px;
-}
+
 
 #show_countries_sidebar{
   padding-top:50px;
@@ -90,4 +88,40 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.flash{
+  margin:10px;
+}
+
+.admin-well{
+  padding:2px;
+  text-align:center;
+  margin:0 auto;
+  width:120px;
+  background-color:#72bcc2;
+  a{
+    font-size:15px;
+    color:white;
+  }
+}
+
+.logo{
+  width:100px;
+}
+
+.navbar{
+  background-color:#f8af53;
+}
+
+.content{
+  padding-top:50px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  padding-top:35px;
+  font-size:15px;
+  &:hover{
+    color:grey;
+  }
 }

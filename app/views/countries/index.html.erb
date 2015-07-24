@@ -1,4 +1,5 @@
 <div class="notice"></div>
+
 <div class="row">
   <div id="show_countries_sidebar">
   </div>
@@ -19,10 +20,6 @@
           <%= image_tag country.attached_image.url(:medium) %>
         <% end %>
       <% end %>
-    <% end %>
-
-    <% if current_user && current_user.admin %>
-      <p><%= link_to "Add country", new_country_path %></p>
     <% end %>
   </div>
 
