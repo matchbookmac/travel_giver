@@ -14,7 +14,7 @@
       <% @countries.each do |country| %>
         <h3><%= link_to country.c_name, country_path(country), remote: true %></h3>
         <% if country.image %>
-          <%= image_tag (country.image), class:"country-image" %>
+          <%= image_tag (country.image), class:"country-image-smaller" %>
         <% else  %>
           <%= image_tag country.attached_image.url(:medium) %>
         <% end %>
