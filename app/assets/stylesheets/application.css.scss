@@ -108,6 +108,7 @@ html {
 
 .logo{
   width:100px;
+  border:none;
 }
 
 .navbar{
@@ -125,3 +126,9 @@ html {
     color:grey;
   }
 }
+
+.navbar-brand{
+  padding-top:35px;
+  font-size:35px;
+  font-family: 'Dancing Script', cursive;
+  }
