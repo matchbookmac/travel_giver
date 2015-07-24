@@ -5,7 +5,7 @@
       <%= link_to "Add project", new_country_project_path(@country) %> |
       <%= link_to "Delete", country_path(@country),
               :data => {:confirm => "Are you sure you want to delete this project?",
-              :method => "delete"} %> 
+              :method => "delete"} %>
     </div>
   <% end %>
   <h1><%= @country.c_name %></h1>
@@ -14,7 +14,7 @@
 
   <% if @country.image %>
     <%= image_tag (@country.image), class:"country-image" %>
-  <% elsif @country.country_image_file_name  %>
+  <% elsif @country.attached_image_file_name  %>
     <%= image_tag @country.attached_image_file_name(:medium) %>
   <% else %>
     <%= image_tag ('missing.png'), class:"country-image" %>
