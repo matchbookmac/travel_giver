@@ -34,15 +34,15 @@ class ProjectsController < ApplicationController
   def edit
     if current_user && current_user.admin
       @country = Country.find(params[:country_id])
-      @project = @country.projects.find(params[:id])
+      @project = Project.find(params[:id])
     else
-      redirect_to new_user_session_path
+      redirect_to root_path
     end
   end
 
   def update
     @country = Country.find(params[:country_id])
-    @project = @country.projects.find(params[:id])
+    @project = Project.find(params[:id])
     if @project.update(project_params)
       flash[:notice] = "Your edits have been saved."
       redirect_to root_path
@@ -56,7 +56,7 @@ class ProjectsController < ApplicationController
     @country = Country.find(params[:country_id])
     @project = @country.projects.find(params[:id])
     @project.destroy
-    redirect_to countries_path
+    redirect_to root_path
   end
 
   private

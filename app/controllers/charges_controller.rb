@@ -28,6 +28,11 @@ class ChargesController < ApplicationController
       :currency    => 'usd'
     )
 
+    respond_to do |format|
+      format.html { redirect_to root_path}
+      format.js {redirect_to root_path}
+    end
+
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to charges_path
